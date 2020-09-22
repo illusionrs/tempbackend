@@ -16,6 +16,10 @@ const userroute=require('./routes/user')
 
 app.use('/user',userroute);
 
+app.get('/work',(req,res)=>{
+    res.send('<h1>working</h1>')
+})
+
 const PORT=process.env.PORT || 8000;
 
 app.listen(PORT,()=>console.log(`running on ${PORT}`));
